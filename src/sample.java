@@ -8,14 +8,10 @@ class Sample {
       System.out.println(availableCharsets);
       Charset defaultCharset = Charset.defaultCharset();
       System.out.println(defaultCharset);
-      if (Charset.isSupported("x-IMAP-mailbox-name")) {
-        System.out.println("x-IMAP-mailbox-name is supported.");
-      } else {
-        System.out.println("x-IMAP-mailbox-name is not supported.");
-      }
+
       Charset UTF8 = Charset.forName("UTF-8");
       Charset ASCII  = Charset.forName("US-ASCII");
-      //Charset M_UTF7 = Charset.forName("x-IMAP-mailbox-name");
+
       if (Charset.isSupported("UTF-7")) {
         System.out.println("UTF-7 is supported.");
         Charset UTF7 = Charset.forName("UTF-7");
@@ -27,13 +23,13 @@ class Sample {
         System.out.println(encoded[1]);
         System.out.println(encoded[2]);
 
-        String str1 = new String(encoded, UTF7);
+        String str1 = new String(encoded, ASCII);
         //String str2 = new String(encoded[1], ASCII);
         //String str3 = new String(encoded[2], ASCII);
 
-        System.out.print(str1);
-        //System.out.print(str2);
-        //System.out.print(str3);
+        System.out.println(str1);
+        //System.out.println(str2);
+        //System.out.println(str3);
       } else {
         System.out.println("UTF-7 is not supported.");
       }
