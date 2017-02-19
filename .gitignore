@@ -1,7 +1,6 @@
 .DS_Store
 node_modules
 npm-debug.log
-*.sw*
 .idea/*
 Thumbs.db
 coverage/
@@ -10,3 +9,4 @@ build/
 *.un~
 *.class
 *.dex
+*.sw*
